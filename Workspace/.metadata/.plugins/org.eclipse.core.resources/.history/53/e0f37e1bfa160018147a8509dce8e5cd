@@ -1,0 +1,28 @@
+package br.com.fiap.bean;
+
+public class ContaPoupanca extends Conta implements ContaInvestimento{
+
+	private float taxa;
+	private static final float RENDIMENTO = 0.005f; //f é para fazer o cast para float, pois o Java interpreta todo número com casas decimais como Double
+	
+	@Override
+	public double calculaRetornoInvestimento() {
+		
+		return 0;
+	}
+
+	@Override
+	public void retirar(double valor) throws Exception {
+		
+		
+	}
+
+	public float getTaxa() {
+		return taxa;
+	}
+
+	public void setTaxa(float taxa) {
+		this.taxa = taxa;
+	}
+
+}

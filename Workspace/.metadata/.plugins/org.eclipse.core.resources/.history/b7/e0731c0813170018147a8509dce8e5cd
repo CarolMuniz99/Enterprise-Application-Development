@@ -1,0 +1,13 @@
+package br.com.fiap.jpa.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Veiculo {
+	
+	private int codigo;
+	private String modelo;
+	private int ano;
+	private String cor;
+	
+}

@@ -1,0 +1,11 @@
+package br.com.fiap.bean;
+
+public class ContaCorrente extends Conta{
+
+	@Override
+	public void retirar(double valor) {
+		
+	}
+
+	
+}

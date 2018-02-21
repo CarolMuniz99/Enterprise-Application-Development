@@ -1,0 +1,27 @@
+package br.com.fiap.bean;
+
+public class ContaPoupanca extends Conta implements ContaInvestimento{
+
+	private float taxa;
+	
+	@Override
+	public double calculaRetornoInvestimento() {
+		
+		return 0;
+	}
+
+	@Override
+	public void retirar(double valor) throws Exception {
+		
+		
+	}
+
+	public float getTaxa() {
+		return taxa;
+	}
+
+	public void setTaxa(float taxa) {
+		this.taxa = taxa;
+	}
+
+}

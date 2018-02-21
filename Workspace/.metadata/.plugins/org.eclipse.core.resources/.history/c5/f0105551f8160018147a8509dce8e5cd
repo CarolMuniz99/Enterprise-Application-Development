@@ -1,0 +1,19 @@
+package br.com.fiap.bean;
+
+public class ContaCorrente extends Conta{
+
+	private TipoConta tipo;
+	
+	@Override
+	public void retirar(double valor) {
+		
+	}
+
+	public TipoConta getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoConta tipo) {
+		this.tipo = tipo;
+	}
+}

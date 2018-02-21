@@ -1,0 +1,41 @@
+package br.com.fiap.jpa.entity;
+
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+
+@Entity @Table(name="TB_VEICULO")
+@SequenceGenerator(name="veiculo", sequenceName="SQ_TB_VEICULO", allocationSize=1)
+public class Veiculo {
+	
+	@Id
+	@Column(name="cd_veiculo")
+	@GeneratedValue(generator="veiculo",strategy=GenerationType.SEQUENCE) //Configurar para usar a sequência (ORACLE)
+	private int codigo;
+	
+	@Column(name="ds_modelo", nullable=false, length=70)
+	private String modelo;
+	
+	@Column(name="ds_ano")
+	private int ano;
+	
+	@Column(name="ds_cor", length=20)
+	private String cor;
+	
+	@Transient //Não será mapeada para uma coluna no banco
+	private int chaveAcesso;
+	
+	@Temporal(TemporalType.DATE) //Somente a data no banco
+	@Column(name="dt_fabricacao")
+	private Calendar dataFabricacao;
+	
+}
